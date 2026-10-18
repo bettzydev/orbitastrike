@@ -1,0 +1,20 @@
+name: OrbitalStrike
+version: 1.0.0
+main: uz.orbitalstrike.OrbitalStrikePlugin
+api-version: '1.21'
+description: Orbital strike items (stab, nuke, wolves, stasis, railgun), death-ban and proximity messages.
+commands:
+  orbitalstrike:
+    aliases: [os, ostrike]
+    description: OrbitalStrike main command
+    usage: /<command> help
+permissions:
+  orbitalstrike.use:
+    description: Use orbital items
+    default: true
+  orbitalstrike.craft:
+    description: Craft orbital items
+    default: true
+  orbitalstrike.admin:
+    description: Give items, run strikes, change settings
+    default: op

@@ -1,0 +1,65 @@
+# ===== OrbitalStrike config =====
+# Change in-game with /os set <key> <value> or edit here and run /os reload
+
+# Players in these worlds cannot use orbital items
+disabled-worlds: []
+
+# Can players craft items with /os craft ?
+recipe-enabled: true
+
+# Seconds between right-click and the strike (0-60)
+rod-delay-seconds: 3
+# Seconds between right-click and the railgun shot (0-60)
+railgun-delay-seconds: 0
+# In creative mode items are not consumed, so this cooldown is used (seconds)
+creative-cooldown-seconds: 5
+# Railgun arrow speed (0-100)
+arrow-velocity: 8.0
+
+nuke:
+  default-rings: 4
+  max-rings: 32
+  max-tnt: 4000        # safety cap per nuke
+  fuse-ticks: 80
+  drop-height: 30
+  ring-spacing: 1.5
+
+stab:
+  radius: 1            # 0 = single block column
+  break-bedrock: false
+
+wolf:
+  default-amount: 20
+  max-amount: 500
+  drop-height: 40
+  spread: 4.0
+  lifetime-seconds: 30 # wolves are removed after this time
+  armor: true
+
+# Crafting costs (/os craft nuke , /os craft stab)
+recipes:
+  nuke:
+    TNT: 64
+    NETHERITE_BLOCK: 1
+    REDSTONE_BLOCK: 8
+    DIAMOND: 16
+  stab:
+    TNT: 16
+    DIAMOND: 8
+    REDSTONE_BLOCK: 2
+
+death-ban:
+  enabled: false
+  deaths-until-ban: 3
+  # -2 = only kick, -1 = permanent ban, or 30m / 1h / 1d / 7d / 2w
+  duration: 1d
+  delay-seconds: 5
+  message: "You Died! You have been Banned for %death.ban.duration%."
+  kick-message: "You died too many times!"
+  sound: "minecraft:entity.wither.spawn"
+  sound-range: 100
+
+proximity:
+  # Join / leave / death messages are shown only to players near the event
+  enabled: false
+  range: 100
